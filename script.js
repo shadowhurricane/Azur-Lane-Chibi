@@ -3,8 +3,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const animationSelect = document.getElementById('animationSelect');
     const playerElement = document.getElementById('player');
 
-    const characters = ['Laffey II', 'character2']; // Replace with actual character names
-    const animations = ['attack', 'dance']; // Replace with actual animation names
+    const characters = ['Laffey II']; // Only one character based on your info
+    const animations = ['Idle', 'Walk', 'Attack']; // Replace with actual animation names from your JSON
 
     // Populate character dropdown
     characters.forEach(character => {
@@ -26,8 +26,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const loadAnimation = (character, animation) => {
         playerElement.innerHTML = ''; // Clear previous player
         new spine.SpinePlayer('player', {
-            jsonUrl: `${character}/${character}.json`,
-            atlasUrl: `${character}/${character}.atlas`,
+            jsonUrl: `Laffey II/lafeiII_SkeletonData.json`,
+            atlasUrl: `Laffey II/lafeiII_Atlas.json`,
             animation: animation,
             backgroundColor: '#00ff00',
             width: 700,
@@ -51,5 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
             loadAnimation(character, animation);
         }
     });
-});
 
+    // Load default character and animation on page load
+    loadAnimation('Laffey II', 'Idle');
+});
