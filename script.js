@@ -37,6 +37,10 @@ document.addEventListener('DOMContentLoaded', () => {
             atlasUrl = `Laffey/lafei_Atlas.json`;
         }
 
+        console.log(`Loading animation for ${character} with animation ${animation}`);
+        console.log(`JSON URL: ${jsonUrl}`);
+        console.log(`Atlas URL: ${atlasUrl}`);
+
         new spine.SpinePlayer('player', {
             jsonUrl: jsonUrl,
             atlasUrl: atlasUrl,
