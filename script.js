@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const playerElement = document.getElementById('player');
 
     const characters = ['Laffey II']; // Only one character based on your info
-    const animations = ['Idle', 'Walk', 'Attack']; // Replace with actual animation names from your JSON
+    const animations = ['normal', 'attack', 'dance']; // Replace with actual animation names from your JSON
 
     // Populate character dropdown
     characters.forEach(character => {
@@ -53,5 +53,5 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Load default character and animation on page load
-    loadAnimation('Laffey II', 'Idle');
+    loadAnimation('Laffey II', 'normal');
 });
