@@ -1,1 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chibi Viewer</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        #player {
+            width: 700px;
+            height: 700px;
+            background-color: green;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .dropdown {
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="dropdown">
+        <label for="characterSelect">Choose a character:</label>
+        <select id="characterSelect">
+            <!-- Options will be dynamically populated -->
+        </select>
+    </div>
+    <div id="player"></div>
+    <div class="dropdown">
+        <label for="animationSelect">Choose an animation:</label>
+        <select id="animationSelect">
+            <!-- Options will be dynamically populated -->
+        </select>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/6.1.3/pixi.min.js"></script>
+    <script src="https://esotericsoftware.com/files/spine-runtime/spine-web-player-4.0.0/spine-player.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
 
