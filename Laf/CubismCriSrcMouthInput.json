@@ -1,0 +1,16 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 5763385767709846417
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": -6620557147103557759
+  },
+  "m_Name": "",
+  "AtomSourceName": "CRIWARE/cv",
+  "SampleChannel": 0,
+  "Gain": 5.0,
+  "Smoothing": 0.0
+}
