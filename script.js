@@ -3,8 +3,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const animationSelect = document.getElementById('animationSelect');
     const playerElement = document.getElementById('player');
 
-    const characters = ['Laffey II']; // Only one character based on your info
-    const animations = ['normal', 'attack', 'dance']; // Replace with actual animation names from your JSON
+    const characters = ['Laffey', 'Laffey II']; // List of characters with Laffey first
+    const animations = ['normal', 'attack', 'dance']; // Specified animations
 
     // Populate character dropdown
     characters.forEach(character => {
@@ -25,9 +25,21 @@ document.addEventListener('DOMContentLoaded', () => {
     // Function to load animation
     const loadAnimation = (character, animation) => {
         playerElement.innerHTML = ''; // Clear previous player
+
+        let jsonUrl = '';
+        let atlasUrl = '';
+
+        if (character === 'Laffey II') {
+            jsonUrl = `Laffey II/lafeiII_SkeletonData.json`;
+            atlasUrl = `Laffey II/lafeiII_Atlas.json`;
+        } else if (character === 'Laffey') {
+            jsonUrl = `Laffey/lafei_SkeletonData.json`;
+            atlasUrl = `Laffey/lafei_Atlas.json`;
+        }
+
         new spine.SpinePlayer('player', {
-            jsonUrl: `Laffey II/lafeiII_SkeletonData.json`,
-            atlasUrl: `Laffey II/lafeiII_Atlas.json`,
+            jsonUrl: jsonUrl,
+            atlasUrl: atlasUrl,
             animation: animation,
             backgroundColor: '#00ff00',
             width: 700,
@@ -53,5 +65,5 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Load default character and animation on page load
-    loadAnimation('Laffey II', 'normal');
+    loadAnimation('Laffey', 'normal');
 });
